@@ -1,5 +1,7 @@
 LeagueTags is an application made for extracting, reading, modifying and sending back data from the updated League of Legends client.
 
+[Review](https://www.youtube.com/watch?v=BsEJb3TTQGw)!
+
 If you want to know more about this process and how it works exactly, please check out [this post on the Riot Games Engineering Blog](https://engineering.riotgames.com/news/architecture-league-client-update)!
 
 ## The Reason Behind It
