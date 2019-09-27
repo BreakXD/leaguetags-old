@@ -7,7 +7,8 @@ Copyright (c) 2018 by Break. All Rights Reserved.
 <head>
   <title>League Tags</title>
   <script src="browser.js"></script>
-  <script>ytb();</script>
+  <script>//ytb();
+</script>
   <link rel="stylesheet" href="style.css">
   <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Patua+One" rel="stylesheet">
@@ -30,8 +31,8 @@ Copyright (c) 2018 by Break. All Rights Reserved.
           <button class="tablinks" onclick="openTab(event, 'Home')" id="defaultOpen">Inicio</button>
           <button class="tablinks" onclick="openTab(event, 'Profile')">Perfil</button>
           <button class="tablinks" onclick="openTab(event, 'Outros')">Outros</button>
-        </div>
 
+        </div>
         <div class="controls">
           <button onclick="minimize_app();"><i class="material-icons icon">remove</i></button>
           <button onclick="open_link();" ><i class="material-icons icon">info</i></button>
@@ -95,8 +96,7 @@ Copyright (c) 2018 by Break. All Rights Reserved.
 
               <div>
                 <select onchange="clubChange()" id="clubData" class="dropdown division center-area">
-               
-                  
+                
                 </select>
 
             </div>
@@ -197,6 +197,12 @@ Copyright (c) 2018 by Break. All Rights Reserved.
                   <option value="I">I</option>
                   <option value="">–</option>
                 </select>
+                <select onchange="queueChange()" id="queue" class="dropdown division center-area">
+                  <option value="RANKED_SOLO_5x5">Solo Queue</option>
+                  <option value="RANKED_FLEX_SR">Flex Queue</option>
+                  <option value="RANKED_TFT">TFT Queue</option>
+                  <option value="RANKED_FLEX_TT">3X3 Queue</option>
+                </select>
               </div>
 
             </div>
@@ -256,7 +262,7 @@ Copyright (c) 2018 by Break. All Rights Reserved.
 
             <div>
             <button type="button" onClick="submitCrashNew()">Crashar</button>
-            <button type="button" onClick="submitInstantMsg()">Descrashar</button>
+            <button type="button" onClick="submitDescrash()">Descrashar</button>
 
           
 
@@ -269,6 +275,7 @@ Copyright (c) 2018 by Break. All Rights Reserved.
                   <option value="ja_JP">Japanese</option>
                   <option value="es_MX">Spanish</option>
                   <option value="ru_RU">Russian</option>
+                  <option value="ko_KR">Korean</option>
                   <option value="zh_CN" disabled>Chinese</option>
                   
                 </select>
