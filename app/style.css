@@ -9,7 +9,8 @@
 }
 
 body {
-  background: linear-gradient(to bottom, rgba(125, 185, 232, 0) -1%, rgba(50, 96, 122, 0) 65%, rgba(10, 49, 64, 0.8) 100%), url(https://images7.alphacoders.com/495/thumb-1920-495671.jpg);
+  background: linear-gradient(to top,rgba(0, 0, 0, 0) -1%, rgba(0, 0, 0, 0) 65%, rgba(0, 0, 0, 0.8) 100%), url(https://cdn.vox-cdn.com/uploads/chorus_asset/file/19231683/Ashe_Splash_10.jpg);
+  
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -50,6 +51,7 @@ h1 {
   font-size: 59px;
   margin-top: 0px;
   margin-bottom: 5px;
+  text-shadow:1px 3px 0px #de1840;
 }
 
 hr {
@@ -285,7 +287,7 @@ textarea:disabled {
   letter-spacing: 0.025rem;
   outline: none;
   padding: 10px 14px;
-  background-color: rgba(30, 35, 40, 0.5);
+  background-color: rgba(30, 35, 40, 1);
   border: 1px solid transparent;
   border-image: linear-gradient(to top, #695625 0%, #A9852D 23%, #B88D35 93%, #C8AA6E 100%) 1;
   overflow: hidden;
@@ -299,13 +301,13 @@ textarea:disabled {
 }
 
 .dropdown:active {
-  background: rgba(30, 35, 40, 0.5);
+  background: rgba(30, 35, 40, 1);
   color: #463714;
   border: 1px solid #463714;
 }
 
 .dropdown:focus {
-  background: linear-gradient(to top, rgba(88, 83, 66, 0.5), rgba(30, 35, 40, 0.5));
+  background: linear-gradient(to top, rgba(88, 83, 66, 1), rgba(30, 35, 40, 1));
   border: 1px solid transparent;
   border-image: linear-gradient(to top, #c89b3c, #f0e6d2) 1;
 }
@@ -535,4 +537,8 @@ textarea:disabled {
   position: fixed;
   margin-top: 7px;
   margin-left: 5px;
+}
+
+.profilerankedtier {
+  text-shadow:-1px 3px 3px #de1840;
 }
