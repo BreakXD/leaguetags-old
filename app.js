@@ -176,7 +176,7 @@ ipcMain.on('submitRegion', (event, region, locale) => { // CLUB
 
 
 
-ipcMain.on('submitTierDivison', (event, tier, division) => {
+ipcMain.on('submitTierDivison', (event, tier, division, queue) => {
 
   let url = routes.Route("submitTierDivison")
 
@@ -191,6 +191,7 @@ ipcMain.on('submitTierDivison', (event, tier, division) => {
         "regalia": "{\"bannerType\":1,\"crestType\":2}",
         "rankedSplitRewardLevel": "3",
         "rankedLeagueTier": tier,
+        "rankedLeagueQueue": queue,
         "rankedLeagueDivision": division
       }
     }
@@ -471,6 +472,50 @@ ipcMain.on('submitLobby', (event, queueId, members) => {
 
   request.put(body)
 })
+
+// CGET ID (NOT WORKING)
+function getSumID(nome){
+
+   let url = routes.Route("submitSumID") + nome
+
+    let body = {
+      url: url,
+      "rejectUnauthorized": false,
+      headers: {
+        Authorization: routes.getAuth()
+      },
+  }
+  
+
+    let callback = function(error, response, body) {
+      
+      var data = JSON.parse(body)
+      return data["summonerId"]
+}
+
+request.get(body, callback)
+}
+
+  
+
+//var idS = getSumID();
+ // LIMPAR CHAT
+ipcMain.on('submitDescrash', (event, nome) => {
+
+ let descrashUrl = routes.Route("submitDescrash") + getSumID(nome) + "/messages"
+     let descrashBody = {
+        url: descrashUrl,
+         "rejectUnauthorized": false,
+            headers: {
+              Authorization: routes.getAuth()
+            },
+            json: {}
+      }
+            request.delete(descrashBody)
+      
+    })
+
+
 
 var autoAccept = function() {
   setInterval(function() {
