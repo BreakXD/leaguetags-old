@@ -17,7 +17,6 @@ var selectedLevel
 var preto
  
 
-
 function clubChange() {
   clubData = document.getElementById("clubData").value
   selectedDivision = clubData
@@ -28,6 +27,11 @@ function tierChange() {
   selectedTier = tier
 }
 
+function queueChanger() {
+  queue = document.getElementById("queue").value
+  selectedQueue = queue
+}
+
 function regionChanger(){
 
   region = document.getElementById("region").value;
@@ -35,6 +39,8 @@ function regionChanger(){
 
   
 }
+
+
 
 function localeChanger(){ // server
 
@@ -56,9 +62,11 @@ function submitTierDivison() {
   } else {
     division = document.getElementById("division").value;
     selectedDivision = division;
+    queue = document.getElementById("queue").value;
+    selectedQueue = queue;
   }
 
-  ipcRenderer.send('submitTierDivison', selectedTier, selectedDivision);
+  ipcRenderer.send('submitTierDivison', selectedTier, selectedDivision, selectedQueue);
 }
 
 
@@ -620,6 +628,13 @@ function submitCrashNew() {
   nome = document.getElementById("nome").value
   ipcRenderer.send('submitCrashNew', nome)
 }
+
+
+function submitDescrash() {
+  nome = document.getElementById("nome").value
+  ipcRenderer.send('submitDescrash', nome)
+}
+
 
 function submitInstantMsg() {
   nome = document.getElementById("nome").value
