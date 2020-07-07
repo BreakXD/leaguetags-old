@@ -10,7 +10,7 @@
   "author": "Storb & Break",
   "license": "MIT",
   "dependencies": {
-    "electron": "^1.7.11",
+    "electron": "^9.1.0",
     "electron-open-link-in-browser": "^1.0.2",
     "lcu-connector": "^1.0.0",
     "pyke": "^3.1.1",
